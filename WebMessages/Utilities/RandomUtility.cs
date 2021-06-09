@@ -16,10 +16,21 @@ namespace WebMessages.Utilities {
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
+        /// <summary>
+        /// Get random word in upper-case style.
+        /// </summary>
+        /// <param name="random"> Random object. </param>
+        /// <param name="length"> Chosen length. </param>
+        /// <returns> Randomized word. </returns>
         public static string RandomWord(this Random random, int length) {
             return random.RandomString(length, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
         }
 
+        /// <summary>
+        /// Get random email.
+        /// </summary>
+        /// <param name="random"> Random object. </param>
+        /// <returns> Randomized email. </returns>
         public static string RandomEmail(this Random random) {
             return random.RandomString(6, "ABCDEFGHIJKLMNOPQRSTUVWXYZ") +
                    "@" +
