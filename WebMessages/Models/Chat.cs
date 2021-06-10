@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
-using WebMessages.Utilities;
 
 namespace WebMessages.Models
 {
@@ -21,9 +20,12 @@ namespace WebMessages.Models
         /// <summary>
         /// List of messages.
         /// </summary>
-        [DataMember] 
+        [DataMember]
         public List<MessageObject> Messages { get; set; } = new List<MessageObject>();
 
+        /// <summary>
+        /// Empty constructor.
+        /// </summary>
         public Chat()
         {
         }
@@ -61,7 +63,7 @@ namespace WebMessages.Models
         }
 
         /// <summary>
-        /// Does email exist
+        /// Are there any users with such email?
         /// </summary>
         /// <param name="email"> Email to check. </param>
         /// <returns> True if email exists. Otherwise false. </returns>
@@ -78,7 +80,7 @@ namespace WebMessages.Models
         {
             return new List<User>(UsersDict.Values);
         }
-        
+
         /// <summary>
         /// Get <paramref name="limit"/> number of users passing <paramref name="offset"/> elements.
         /// </summary>
