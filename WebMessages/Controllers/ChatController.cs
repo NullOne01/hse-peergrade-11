@@ -161,7 +161,7 @@ namespace WebMessages.Controllers
         /// <param name="limit" example="1"> Number of users to get. </param>
         /// <param name="offset" example="0"> Number of users to skip. </param>
         /// <response code="200"> Users were successfully returned. </response>
-        /// <response code="404">
+        /// <response code="400">
         ///     <paramref name="limit"/> &lt;= 0 or <paramref name="offset"/> &lt; 0.
         /// </response>
         [HttpGet("get-all-users-query")]
